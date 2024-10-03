@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMAT EU Ranking Calculator</title>
+  <link rel="stylesheet" href="style.css"> <!-- Referenza al file CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1>Estimated 2024 IMAT Ranking</h1>
+    <h3 >Insert your score and you'll get an estimate of your position in the EU 10th October Ranking. 
+      The number you'll see is the projected number of people in front of you. </h3>
+    
+    <!-- Il tuo form per l'input dei punteggi -->
+    <form id="rankingForm">
+      <label for="totalScore">Your total score:</label>
+      <input type="text" id="totalScore" name="totalScore" required>
+      <br>
+      
+      <label for="bioScore">Your Biology Score:</label>
+      <input type="text" id="bioScore" name="bioScore" required>
+      <br>
+
+      <label for="chemistryScore">Your Chemistry score:</label>
+      <input type="text" id="chemistryScore" name="chemistryScore" required>
+      <br>
+
+      <label for="mathScore">Your Maths&Physics score:</label>
+      <input type="text" id="mathScore" name="mathScore" required>
+      <br>
+
+      <input type="submit" value="Calcola Posizione">
+    </form>
+
+    <!-- Dove visualizzerai il risultato -->
+    <div id="result"></div>
+    
+    <!-- Tabella con i dati -->
+    <table id="scoreTable" class="data-table">
+      <p>Below you will find an ESTIMATE of the last available positions for each university. 
+        The first call will be on October 10th. The last call is an estimate of the final opportunity
+         for admission after all the rounds. The optimistic estimate is based on 2022 data, while the 
+         pessimistic one is based on 2023. If your score is lower than the last available position, 
+         you are in (green box), but if it is higher, well, let's hope the model is wrong (red box)! </p>
+      <!-- La tabella verrà riempita con i dati dal JavaScript -->
+    </table>
+    
+  </div>
+
+
+
+  <!-- Caricamento dello script -->
+  <script src="script.js"></script>
+</body>
+</html>
