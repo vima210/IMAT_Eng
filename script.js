@@ -19,12 +19,12 @@ document.getElementById('mathScore').addEventListener('input', validateInput);
 const sedePercentuale = {
   "marche": 0.40,
   "messina": 0.40,
-  "parma": 0.40,
-  "lvanvitelli": 0.40,
-  "pavia": 0.30,
-  "federico": 0.35,
-  "torino": 0.35,
-  "bologna": 0.25,
+  "parma": 0.30,
+  "lvanvitelli": 0.30,
+  "pavia": 0.25,
+  "federico": 0.30,
+  "torino": 0.30,
+  "bologna": 0.20,
   "bari": 0.20,
   "sapienza": 0.15,
   "padova": 0.15,
@@ -33,7 +33,7 @@ const sedePercentuale = {
   "catania": 0.01,
   "torvergata": 0.01,
   "dent_siena": 0.05,
-  "esteri": 0.92
+  "esteri": 0.90
 };
 
 // Funzione per calcolare la posizione dell'utente nella graduatoria
@@ -172,27 +172,26 @@ document.getElementById('rankingForm').addEventListener('submit', function(e) {
     .catch(error => console.error('Errore nel caricamento del CSV:', error));
 });
 
-
 // Funzione per caricare e visualizzare la tabella con i dati forniti
 function loadTable() {
   // Dati della tabella forniti
   const tableData = [
-    { Sede: 'ROMA Sapienza', Posti: 45, Scorrimento0: 344, Ottimistico: 997, Pessimistico: 447 },
-    { Sede: 'ROMA Tor Vergata', Posti: 40, Scorrimento0: 675, Ottimistico: 1959, Pessimistico: 878 },
-    { Sede: 'MI Statale', Posti: 55, Scorrimento0: 243, Ottimistico: 703, Pessimistico: 315 },
-    { Sede: 'BOLOGNA', Posti: 97, Scorrimento0: 433, Ottimistico: 1256, Pessimistico: 563 },
-    { Sede: 'MI Bicocca', Posti: 30, Scorrimento0: 302, Ottimistico: 876, Pessimistico: 393 },
-    { Sede: 'NA Federico II', Posti: 15, Scorrimento0: 349, Ottimistico: 1012, Pessimistico: 454 },
-    { Sede: 'PAVIA', Posti: 103, Scorrimento0: 556, Ottimistico: 1612, Pessimistico: 723 },
-    { Sede: 'BARI', Posti: 69, Scorrimento0: 1048, Ottimistico: 3039, Pessimistico: 1362 },
-    { Sede: 'TORINO', Posti: 38, Scorrimento0: 410, Ottimistico: 1168, Pessimistico: 511 },
-    { Sede: 'VANVITELLI', Posti: 60, Scorrimento0: 863, Ottimistico: 1487, Pessimistico: 667 },
-    { Sede: 'MARCHE', Posti: 20, Scorrimento0: 513, Ottimistico: 1487, Pessimistico: 667 },
-    { Sede: 'PADOVA', Posti: 75, Scorrimento0: 513, Ottimistico: 1598, Pessimistico: 716 },
-    { Sede: 'PARMA', Posti: 75, Scorrimento0: 782, Ottimistico: 2267, Pessimistico: 1016 },
-    { Sede: 'CATANIA', Posti: 30, Scorrimento0: 510, Ottimistico: 1479, Pessimistico: 663 },
-    { Sede: 'MESSINA', Posti: 55, Scorrimento0: 1011, Ottimistico: 2933, Pessimistico: 1315 },
-    { Sede: 'CAGLIARI', Posti: 80, Scorrimento0: 1130, Ottimistico: 3227, Pessimistico: 1469 },
+    { Sede: 'ROMA Sapienza', Posti: 45, Scorrimento0: 311, Ottimistico: 900, Pessimistico: 404 },
+    { Sede: 'ROMA Tor Vergata', Posti: 40, Scorrimento0: 629, Ottimistico: 1825, Pessimistico: 818 },
+    { Sede: 'MI Statale', Posti: 55, Scorrimento0: 277, Ottimistico: 803, Pessimistico: 360 },
+    { Sede: 'BOLOGNA', Posti: 97, Scorrimento0: 439, Ottimistico: 1273, Pessimistico: 571 },
+    { Sede: 'MI Bicocca', Posti: 30, Scorrimento0: 339, Ottimistico: 982, Pessimistico: 440 },
+    { Sede: 'NA Federico II', Posti: 15, Scorrimento0: 381, Ottimistico: 1104, Pessimistico: 495 },
+    { Sede: 'PAVIA', Posti: 103, Scorrimento0: 651, Ottimistico: 1889, Pessimistico: 847 },
+    { Sede: 'BARI', Posti: 69, Scorrimento0: 941, Ottimistico: 2729, Pessimistico: 1123 },
+    { Sede: 'TORINO', Posti: 38, Scorrimento0: 696, Ottimistico: 2019, Pessimistico: 905 },
+    { Sede: 'VANVITELLI', Posti: 60, Scorrimento0: 880, Ottimistico: 2553, Pessimistico: 1144 },
+    { Sede: 'MARCHE', Posti: 20, Scorrimento0: 830, Ottimistico: 2407, Pessimistico: 1079 },
+    { Sede: 'PADOVA', Posti: 75, Scorrimento0: 578, Ottimistico: 1667, Pessimistico: 752 },
+    { Sede: 'PARMA', Posti: 75, Scorrimento0: 821, Ottimistico: 2380, Pessimistico: 1067 },
+    { Sede: 'CATANIA', Posti: 30, Scorrimento0: 1080, Ottimistico: 3132, Pessimistico: 1404 },
+    { Sede: 'MESSINA', Posti: 55, Scorrimento0: 1056, Ottimistico: 3062, Pessimistico: 1373 },
+    { Sede: 'CAGLIARI', Posti: 80, Scorrimento0: 1102, Ottimistico: 3480, Pessimistico: 1560 },
   ];
 
   let tableHTML = '<thead><tr><th>University</th><th>Available seats</th><th>Last available seat at first round</th><th>Last available seat FINAL round OPTIMISTIC</th><th>Last available seat FINAL round PESSIMISTIC</th></tr></thead><tbody>';
