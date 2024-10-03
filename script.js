@@ -130,7 +130,7 @@ document.getElementById('rankingForm').addEventListener('submit', function(e) {
       } else {
         // Posizione > 2000, calcola separatamente fino a 2000 e oltre
         const posizioneFinoADuemila = 2000;
-        const posizioneDopoDuemila = Math.abs(posizione - 2000) * 0.38;
+        const posizioneDopoDuemila = Math.abs(posizione - 2000) * 0.50;
 
         // Calcoliamo le esclusioni fino a 2000
         const partecipantiPerSede = {};
