@@ -184,7 +184,7 @@ function loadTable() {
     { Sede: 'NA Federico II', Posti: 15, Scorrimento0: 381, Ottimistico: 1104, Pessimistico: 495 },
     { Sede: 'PAVIA', Posti: 103, Scorrimento0: 651, Ottimistico: 1889, Pessimistico: 847 },
     { Sede: 'BARI', Posti: 69, Scorrimento0: 941, Ottimistico: 2729, Pessimistico: 1123 },
-    { Sede: 'TORINO', Posti: 38, Scorrimento0: 696, Ottimistico: 2019, Pessimistico: 905 },
+    { Sede: 'TORINO', Posti: 70, Scorrimento0: 696, Ottimistico: 2019, Pessimistico: 905 },
     { Sede: 'VANVITELLI', Posti: 60, Scorrimento0: 880, Ottimistico: 2553, Pessimistico: 1144 },
     { Sede: 'MARCHE', Posti: 20, Scorrimento0: 830, Ottimistico: 2407, Pessimistico: 1079 },
     { Sede: 'PADOVA', Posti: 75, Scorrimento0: 578, Ottimistico: 1667, Pessimistico: 752 },
