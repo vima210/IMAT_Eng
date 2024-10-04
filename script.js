@@ -33,7 +33,7 @@ const sedePercentuale = {
   "catania": 0.01,
   "torvergata": 0.01,
   "dent_siena": 0.05,
-  "esteri": 0.90
+  "esteri": 0.82  
 };
 
 // Funzione per calcolare la posizione dell'utente nella graduatoria
