@@ -17,23 +17,23 @@ document.getElementById('mathScore').addEventListener('input', validateInput);
 
 // Mappa delle percentuali di esclusione per sede
 const sedePercentuale = {
-  "marche": 0.40,
-  "messina": 0.40,
-  "parma": 0.30,
-  "lvanvitelli": 0.30,
-  "pavia": 0.25,
-  "federico": 0.30,
-  "torino": 0.30,
-  "bologna": 0.20,
-  "bari": 0.20,
-  "sapienza": 0.15,
-  "padova": 0.15,
-  "milano": 0.15,
+  "marche": 0.20,
+  "messina": 0.20,
+  "parma": 0.10,
+  "lvanvitelli": 0.10,
+  "pavia": 0.15,
+  "federico": 0.10,
+  "torino": 0.10,
+  "bologna": 0.10,
+  "bari": 0.05,
+  "sapienza": 0.1,
+  "padova": 0.05,
+  "milano": 0.1,
   "bicocca": 0.05,
   "catania": 0.01,
   "torvergata": 0.01,
   "dent_siena": 0.05,
-  "esteri": 0.82  
+  "esteri": 0.80 
 };
 
 // Funzione per calcolare la posizione dell'utente nella graduatoria
