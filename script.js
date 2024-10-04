@@ -19,11 +19,11 @@ document.getElementById('mathScore').addEventListener('input', validateInput);
 const sedePercentuale = {
   "marche": 0.20,
   "messina": 0.20,
-  "parma": 0.10,
+  "parma": 0.20,
   "lvanvitelli": 0.10,
   "pavia": 0.15,
-  "federico": 0.10,
-  "torino": 0.10,
+  "federico": 0.20,
+  "torino": 0.25,
   "bologna": 0.10,
   "bari": 0.05,
   "sapienza": 0.1,
@@ -33,7 +33,7 @@ const sedePercentuale = {
   "catania": 0.01,
   "torvergata": 0.01,
   "dent_siena": 0.05,
-  "esteri": 0.80 
+  "esteri": 0.84
 };
 
 // Funzione per calcolare la posizione dell'utente nella graduatoria
@@ -171,33 +171,32 @@ document.getElementById('rankingForm').addEventListener('submit', function(e) {
     })
     .catch(error => console.error('Errore nel caricamento del CSV:', error));
 });
-
 // Funzione per caricare e visualizzare la tabella con i dati forniti
 function loadTable() {
   // Dati della tabella forniti
   const tableData = [
-    { Sede: 'ROMA Sapienza', Posti: 45, Scorrimento0: 311, Ottimistico: 900, Pessimistico: 404 },
-    { Sede: 'ROMA Tor Vergata', Posti: 40, Scorrimento0: 629, Ottimistico: 1825, Pessimistico: 818 },
-    { Sede: 'MI Statale', Posti: 55, Scorrimento0: 277, Ottimistico: 803, Pessimistico: 360 },
-    { Sede: 'BOLOGNA', Posti: 97, Scorrimento0: 439, Ottimistico: 1273, Pessimistico: 571 },
-    { Sede: 'MI Bicocca', Posti: 30, Scorrimento0: 339, Ottimistico: 982, Pessimistico: 440 },
-    { Sede: 'NA Federico II', Posti: 15, Scorrimento0: 381, Ottimistico: 1104, Pessimistico: 495 },
-    { Sede: 'PAVIA', Posti: 103, Scorrimento0: 651, Ottimistico: 1889, Pessimistico: 847 },
-    { Sede: 'BARI', Posti: 69, Scorrimento0: 941, Ottimistico: 2729, Pessimistico: 1123 },
-    { Sede: 'TORINO', Posti: 70, Scorrimento0: 696, Ottimistico: 2019, Pessimistico: 905 },
-    { Sede: 'VANVITELLI', Posti: 60, Scorrimento0: 880, Ottimistico: 2553, Pessimistico: 1144 },
-    { Sede: 'MARCHE', Posti: 20, Scorrimento0: 830, Ottimistico: 2407, Pessimistico: 1079 },
-    { Sede: 'PADOVA', Posti: 75, Scorrimento0: 578, Ottimistico: 1667, Pessimistico: 752 },
-    { Sede: 'PARMA', Posti: 75, Scorrimento0: 821, Ottimistico: 2380, Pessimistico: 1067 },
-    { Sede: 'CATANIA', Posti: 30, Scorrimento0: 1080, Ottimistico: 3132, Pessimistico: 1404 },
-    { Sede: 'MESSINA', Posti: 55, Scorrimento0: 1056, Ottimistico: 3062, Pessimistico: 1373 },
-    { Sede: 'CAGLIARI', Posti: 80, Scorrimento0: 1102, Ottimistico: 3480, Pessimistico: 1560 },
+    { Sede: 'ROMA Sapienza', Posti: 45, Scorrimento0: 311, Ottimistico: 900, Medio: 652, Pessimistico: 404 },
+    { Sede: 'ROMA Tor Vergata', Posti: 40, Scorrimento0: 629, Ottimistico: 1825, Medio: 1321, Pessimistico: 818 },
+    { Sede: 'MI Statale', Posti: 55, Scorrimento0: 277, Ottimistico: 803, Medio: 581, Pessimistico: 360 },
+    { Sede: 'BOLOGNA', Posti: 97, Scorrimento0: 439, Ottimistico: 1273, Medio: 921, Pessimistico: 571 },
+    { Sede: 'MI Bicocca', Posti: 30, Scorrimento0: 339, Ottimistico: 982, Medio: 722, Pessimistico: 440 },
+    { Sede: 'NA Federico II', Posti: 15, Scorrimento0: 381, Ottimistico: 1104, Medio: 722, Pessimistico: 495 },
+    { Sede: 'PAVIA', Posti: 103, Scorrimento0: 651, Ottimistico: 1889, Medio: 722, Pessimistico: 847 },
+    { Sede: 'BARI', Posti: 69, Scorrimento0: 941, Ottimistico: 2729, Medio: 722, Pessimistico: 1123 },
+    { Sede: 'TORINO', Posti: 70, Scorrimento0: 696, Ottimistico: 2019, Medio: 722, Pessimistico: 905 },
+    { Sede: 'VANVITELLI', Posti: 60, Scorrimento0: 880, Ottimistico: 2553, Medio: 722, Pessimistico: 1144 },
+    { Sede: 'MARCHE', Posti: 20, Scorrimento0: 830, Ottimistico: 2407, Medio: 722, Pessimistico: 1079 },
+    { Sede: 'PADOVA', Posti: 75, Scorrimento0: 578, Ottimistico: 1667, Medio: 722, Pessimistico: 752 },
+    { Sede: 'PARMA', Posti: 75, Scorrimento0: 821, Ottimistico: 2380, Medio: 722, Pessimistico: 1067 },
+    { Sede: 'CATANIA', Posti: 30, Scorrimento0: 1080, Ottimistico: 3132, Medio: 722, Pessimistico: 1404 },
+    { Sede: 'MESSINA', Posti: 55, Scorrimento0: 1056, Ottimistico: 3062, Medio: 722, Pessimistico: 1373 },
+    { Sede: 'CAGLIARI', Posti: 80, Scorrimento0: 1102, Ottimistico: 3480, Medio: 722, Pessimistico: 1560 },
   ];
 
-  let tableHTML = '<thead><tr><th>University</th><th>Available seats</th><th>Last available seat at first round</th><th>Last available seat FINAL round OPTIMISTIC</th><th>Last available seat FINAL round PESSIMISTIC</th></tr></thead><tbody>';
+  let tableHTML = '<thead><tr><th>University</th><th>Available seats</th><th>Last available seat at first round</th><th>Last available seat FINAL round OPTIMISTIC</th><th>Last available seat FINAL round MEDIO</th><th>Last available seat FINAL round PESSIMISTIC</th></tr></thead><tbody>';
 
   tableData.forEach(row => {
-    tableHTML += `<tr><td>${row.Sede}</td><td>${row.Posti}</td><td>${row.Scorrimento0}</td><td>${row.Ottimistico}</td><td>${row.Pessimistico}</td></tr>`;
+    tableHTML += `<tr><td>${row.Sede}</td><td>${row.Posti}</td><td>${row.Scorrimento0}</td><td>${row.Ottimistico}</td><td>${row.Medio}</td><td>${row.Pessimistico}</td></tr>`;
   });
 
   tableHTML += '</tbody>';
@@ -208,23 +207,26 @@ function loadTable() {
 loadTable();
 
 // Funzione per evidenziare le righe in base alla posizione finale
-// Funzione per evidenziare le righe in base alla posizione finale
-// Funzione per evidenziare le righe in base alla posizione finale
-// Funzione per evidenziare le righe in base alla posizione finale
 function evidenziaPosizioni(tableData, posizioneFinale) {
   const rows = document.querySelectorAll('#scoreTable tbody tr');
 
-  rows.forEach((row, index) => {
+  rows.forEach((row) => {
+    const posizioneCell2 = row.cells[1]; // Colonna 2
     const posizioneCell3 = row.cells[2]; // Colonna 3
     const posizioneCell4 = row.cells[3]; // Colonna 4
     const posizioneCell5 = row.cells[4]; // Colonna 5
+    const posizioneCell6 = row.cells[5]; // Colonna 6
 
     // Converte i valori in numero
+    const posizione2 = parseFloat(posizioneCell2.innerText.replace(',', '.'));
     const posizione3 = parseFloat(posizioneCell3.innerText.replace(',', '.'));
     const posizione4 = parseFloat(posizioneCell4.innerText.replace(',', '.'));
     const posizione5 = parseFloat(posizioneCell5.innerText.replace(',', '.'));
+    const posizione6 = parseFloat(posizioneCell6.innerText.replace(',', '.'));
 
-    // Cambia colore in base alla posizione finale per le colonne 3, 4 e 5
+    // Cambia colore in base alla posizione finale per le colonne 2, 3, 4 e 5
+ 
+
     if (posizione3 < posizioneFinale) {
       posizioneCell3.style.color = 'red'; // Evidenzia in rosso i numeri minori della PosizioneFinale
     } else if (posizione3 > posizioneFinale) {
@@ -242,9 +244,11 @@ function evidenziaPosizioni(tableData, posizioneFinale) {
     } else if (posizione5 > posizioneFinale) {
       posizioneCell5.style.color = 'green'; // Evidenzia in verde i numeri maggiori della PosizioneFinale
     }
+
+    if (posizione6 < posizioneFinale) {
+      posizioneCell6.style.color = 'red'; // Evidenzia in rosso i numeri minori della PosizioneFinale
+    } else if (posizione6 > posizioneFinale) {
+      posizioneCell6.style.color = 'green'; // Evidenzia in verde i numeri maggiori della PosizioneFinale
+    }
   });
 }
-
-
-
-
